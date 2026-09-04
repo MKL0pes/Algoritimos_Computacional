@@ -1,0 +1,45 @@
+//Sabendo que na Faculdade ABC a média mínima é 7,0 e a tolerância de faltas é 15 % da carga horária do curso, faça um programação em C que peça as informações necessárias e informe a situação do usuário.
+
+#include <stdio.h>
+
+int main() {
+  float media;
+  float carga_horaria;
+
+  float faltas;
+  float limite_faltas;
+
+
+
+  printf("Informe a media final do aluno: ");
+  scanf("%f", &media);
+
+
+
+  printf("Informe a carga horaria total do curso (em horas): ");
+  scanf("%f", &carga_horaria);
+
+
+  printf("Informe a quantidade de horas de faltas do aluno: ");
+  scanf("%f", &faltas);
+
+  limite_faltas = carga_horaria * 0.15;
+
+  if (media >= 7.0 && faltas <= limite_faltas) {
+    printf("\nSituacao: APROVADO\n");
+  } else {
+    printf("\nSituacao: REPROVADO\n");
+    if (media < 7.0) {
+      printf("- Motivo: Media (%.2f) abaixo do minimo exigido (7.0).\n", media);
+    }
+    if (faltas > limite_faltas) {
+      printf("- Motivo: Faltas (%.1fh) excedem o limite de 15%% (%.1fh).\n", faltas, limite_faltas);
+    }
+
+  }
+
+
+
+  return 0;
+
+}
