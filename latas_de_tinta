@@ -6,7 +6,6 @@ Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço
 #include <math.h>
 
 int main() {
-
   float area, litros_necessarios, preco_total;
   int latas_necessarias;
 
@@ -24,3 +23,4 @@ int main() {
   return 0;
 
 }
+
