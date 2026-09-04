@@ -13,7 +13,7 @@ int main() {
   scanf("%f", &area);
 
   litros_necessarios = area / 3.0;
-  latas_necessarias = ceil(litros_necessarios / 18.0);
+  latas_necessarias = (int) ceil(litros_necessarios / 18.0);
   preco_total = latas_necessarias * 80.00;
 
   printf("\n--- Resumo da Compra ---\n");
