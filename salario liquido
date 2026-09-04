@@ -1,0 +1,54 @@
+//Construa um programação em C que peça o Nome, Endereço, Sexo, Cidade, Estado, Idade dos funcionários. Além disto, dado o Salário Bruto do funcionário, calcule o seu Salário Líquido. Considere que os descontos podem ser o Vale Transporte (2%), Vale Alimentação (5%) e Plano de Saúde (10%).
+
+#include <stdio.h>
+
+int main()
+
+{ 
+
+  char nome[100];
+  char endereço[100];
+  char sexo;
+  char cidade[50];
+  char estado[50];
+  int idade;
+  float salarioBruto, salarioLiquido, valeTrasporte, valeAlimentacao, planoSaude;
+
+  printf("***** Sistema de Cálculo de Salário ***** \n\n");
+
+
+  printf("Nome........:");
+  scanf(" %[^\n]",nome);
+  printf("Endereço........:");
+  scanf(" %[^\n]",endereço);
+  printf("Sexo........:");
+  scanf(" %c",&sexo);
+  printf("Cidade........:");
+  scanf(" %[^\n]",cidade);
+  printf("Estado........:");
+  scanf(" %[^\n]",estado);
+  printf("Idade........:");
+  scanf(" %d",&idade);
+  printf("Salário Bruto.:");
+  scanf(" %f",&salarioBruto);
+
+   
+  valeAlimentacao = salarioBruto * 0.05;
+  valeTrasporte = salarioBruto * 0.02;
+  planoSaude = salarioBruto * 0.10;
+  salarioLiquido = salarioBruto - valeTrasporte - valeAlimentacao - planoSaude;
+
+   
+  printf("\n ************ Salário Líquido**************\n");
+  printf("Nome.....: %s\n",nome);
+  printf("\nSalário Bruto..................: R$ %.2f",salarioBruto);
+  printf("\n(-) Vale Alimentação...........: R$ %.2f",valeAlimentacao);
+  printf("\n(-) Vale Trasporte.............: R$ %.2f",valeTrasporte);
+  printf("\n(-) Plano de Saúde.............: R$ %.2f",planoSaude);
+  printf("\nSalário Líquido................: R$ %.2f",planoSaude);  
+
+  
+  return 0;
+
+}
+
