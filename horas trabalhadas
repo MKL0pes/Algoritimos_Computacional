@@ -1,0 +1,31 @@
+//O valor pago por um Hotel da Praia de Iracema para seus porteiros é de R$ 10,25 por hora de trabalho. Faça um programa que pergunte ao usuário quantas horas ele trabalhou e imprima na tela o valor do salário a ser recebido por ele.
+
+#include <stdio.h>
+
+
+
+int main() {
+
+  float horas_trabalhadas, salario;
+
+  const float valor_hora = 10.25;
+
+
+
+  printf("Informe a quantidade de horas trabalhadas: ");
+
+  scanf("%f", &horas_trabalhadas);
+
+
+
+  salario = horas_trabalhadas * valor_hora;
+
+
+
+  printf("O valor do salario a ser recebido é: R$ %.2f\n", salario);
+
+
+
+  return 0;
+
+}
